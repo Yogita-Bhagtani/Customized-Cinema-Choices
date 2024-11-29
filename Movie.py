@@ -9,7 +9,9 @@ import streamlit as st
 import pickle
 import requests
 
-similarity=pickle.load(open(r'C:\Users\DeLL\Documents\Machine l\Movie\saved_models\similarity.pkl','rb'))
+working_dir = os.path.dirname(os.path.abspath(__file__))
+
+similarity=pickle.load(open(f'{working_dir}\saved_models\similarity.pkl','rb'))
 
 
 def fetch_poster(movie_id):
@@ -53,7 +55,7 @@ st.set_page_config(page_title="Movie Recommender",
 
     
     
-movies_list=pickle.load(open(r'C:\Users\DeLL\Documents\Machine l\Movie\saved_models\movies.pkl','rb'))
+movies_list=pickle.load(open(f'{working_dir}\saved_models\movies.pkl','rb'))
 
 st.header("Movie Recommendation")
 selected_movie_name=st.selectbox(
