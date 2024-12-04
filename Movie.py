@@ -11,7 +11,7 @@ import requests
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
 
-similarity=pickle.load(open(r'saved_model2\similarity.pkl','rb'))
+similarity=pickle.load(open(r'saved_model2\similarity.pkl'))
 
 
 def fetch_poster(movie_id):
